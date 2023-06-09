@@ -1,0 +1,28 @@
+
+.slideButton {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0 15px 20px -10px rgba(var(--box-shadow-rgb-color), 0.0991313);
+  border-radius: 28px;
+  overflow: hidden;
+
+  .previousButton, .nextButton {
+    flex: 1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .previousButton {
+    background: url("/icons/icon-prev.svg") no-repeat center;
+    background-size: auto 12px;
+  }
+
+  .nextButton {
+    background: url("/icons/icon-next.svg") no-repeat center;
+    background-size: auto 12px;
+  }
+}
