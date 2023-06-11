@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .slideButton {
   width: 80px;
@@ -8,21 +9,29 @@
   border-radius: 28px;
   overflow: hidden;
 
+  @include media(">desktop") {
+    width: 112px;
+    height: 56px;
+  }
+
   .previousButton, .nextButton {
     flex: 1;
     background: transparent;
     border: none;
     cursor: pointer;
     outline: none;
+    background-size: auto 12px !important;
+
+    @include media(">desktop") {
+      background-size: auto 16px !important;
+    }
   }
 
   .previousButton {
     background: url("/icons/icon-prev.svg") no-repeat center;
-    background-size: auto 12px;
   }
 
   .nextButton {
     background: url("/icons/icon-next.svg") no-repeat center;
-    background-size: auto 12px;
   }
 }
