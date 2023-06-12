@@ -1,6 +1,12 @@
+@import "styles/utils";
 
 .slide {
   flex: 1;
+  width: 100%;
   min-width: 327px;
   height: 100%;
+
+  @include media(">desktop") {
+    min-width: 100vw;
+  }
 }
