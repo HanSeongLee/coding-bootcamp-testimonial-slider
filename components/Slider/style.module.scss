@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .slider {
   position: relative;
@@ -18,5 +19,11 @@
     top: 263px;
     left: 50%;
     transform: translateX(-50%);
+
+    @include media(">desktop") {
+      top: calc(50% + 225px);
+      left: calc(50% + 15px + 62px);
+      transform: translateY(50%);
+    }
   }
 }

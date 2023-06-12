@@ -7,7 +7,6 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
     activeIndex: number;
     onPrev: () => void;
     onNext: () => void;
-    onAnimationEnd?: () => void;
 }
 
 const Slider: React.FC<IProps> = ({
