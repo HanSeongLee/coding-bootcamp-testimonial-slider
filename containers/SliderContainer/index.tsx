@@ -11,16 +11,14 @@ const SliderContainer: React.FC<IProps> = ({ children }) => {
 
     const onPrev = () => {
         if (activeIndex === 0) {
+            setActiveIndex(children.length - 1);
             return;
         }
         setActiveIndex(activeIndex - 1);
     };
 
     const onNext = () => {
-        if (activeIndex === children.length - 1) {
-            return;
-        }
-        setActiveIndex(activeIndex + 1);
+        setActiveIndex((activeIndex + 1) % children.length);
     };
 
     const onKeyUp = (e: KeyboardEvent) => {
