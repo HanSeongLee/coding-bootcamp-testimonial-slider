@@ -7,16 +7,20 @@ interface IProps extends HTMLAttributes<HTMLDivElement> {
     activeIndex: number;
     onPrev: () => void;
     onNext: () => void;
+    children: React.ReactNode[];
+    animationDuration?: number;
 }
 
 const Slider: React.FC<IProps> = ({
                                       activeIndex, onPrev, onNext, className,
-                                      children, ...props
+                                      animationDuration=500, children, ...props
                                   }) => {
+
     return (
         <div className={cn(styles.slider, className)}
              style={{
                  '--active-index': activeIndex,
+                 '--animation-duration': `${animationDuration}ms`,
              } as React.CSSProperties}
              {...props}
         >
